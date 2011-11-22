@@ -10,7 +10,7 @@ module PortfolioList
     dir.each do | d |
       list << "'/#{BASE_DIR}/#{name}/#{d}'" unless d =~ /^\./
     end
-    list.join( ',' )
+    list.sort.join( ',' )
   end
 end
 
