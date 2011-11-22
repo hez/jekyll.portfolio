@@ -55,6 +55,13 @@ $(document).ready( function(){
       $(this).stop().animate( {opacity: 1}, 1500 );
   });
 
+  // Handle clicking on the main image, load up next
+  $('#portfolio_container a').click( function(event){
+    loadNextImage();
+    event.preventDefault();
+  });
+
+  // Handle clicking on the thumbnails
   $('#portfolio_thumbs a').click( function(event){
     index = $(this).attr('index');
     updateImageHash( index );
